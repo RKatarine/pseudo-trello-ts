@@ -1,0 +1,19 @@
+.board {
+  display: -webkit-flex;
+  display: flex;
+  overflow-y: auto;
+  outline: none;
+  background-color: #026aa7;
+  justify-content: center;
+}
+
+
+
+.wrapper {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 30px;
+  flex-direction: row;
+}

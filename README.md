@@ -1,3 +1,10 @@
+#Warning
+This project in work!  
+
+
+This project is education project, with implements trello board.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
