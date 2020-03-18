@@ -5,7 +5,6 @@ import { IDesk } from "../../interfaces";
 
 export const Desk: React.FC<IDesk> = ({
   sections,
-  onChangeSection,
   draggedCardInfo,
   setDraggedCardInfo,
   changeCardSection
@@ -17,9 +16,10 @@ export const Desk: React.FC<IDesk> = ({
           <Section
             key={section.id}
             {...section}
-            onChange={onChangeSection}
             draggedCardInfo={draggedCardInfo}
             setDraggedCardInfo={setDraggedCardInfo}
+            onAddCard={() => {}}
+            onEditCard={() => {}}
           ></Section>
         ))}
       </div>

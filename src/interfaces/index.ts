@@ -2,7 +2,7 @@ import React from "react";
 
 export interface ICard {
     id: string,
-    title: string,
+    text: string,
 }
 
 export interface ISection {
@@ -26,7 +26,7 @@ export interface IDesk {
     onChangeSection: () => void,
     setDraggedCardInfo: () => void,
     changeCardSection: () => void
-    draggedCardInfo: IDraggedCardInfo,
+    draggedCardInfo: IDraggedCardInfo|null,
 }
 
 export interface ISectionView {
@@ -36,7 +36,7 @@ export interface ISectionView {
     onAddCard: () => void,
     onEditCard: () => void,
     setDraggedCardInfo: (draggedCardInfo: IDraggedCardInfo | null) => void,
-    draggedCardInfo: IDraggedCardInfo
+    draggedCardInfo: IDraggedCardInfo|null
 }
 
 export interface ICardView {

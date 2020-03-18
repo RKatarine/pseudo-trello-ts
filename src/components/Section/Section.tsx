@@ -19,7 +19,7 @@ export const Section: React.FC<ISectionView> = ({
         {cards.map(card => (
           <Card
             isActive={
-              draggedCardInfo &&
+              draggedCardInfo !== null &&
               draggedCardInfo.cardId === card.id &&
               draggedCardInfo.sectionId === id
             }
@@ -35,7 +35,9 @@ export const Section: React.FC<ISectionView> = ({
             }
             onEditCard={onEditCard}
             key={card.id}
-            {...card}
+            text={card.text}
+            setEditingMode={() => {}}
+            showEditButton={false}
           />
         ))}
       </div>
