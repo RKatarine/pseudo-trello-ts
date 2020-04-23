@@ -1,4 +1,4 @@
-.app {
+.App {
   flex: auto;
   display: flex;
   flex-direction: column;
@@ -22,7 +22,7 @@
   background: rgba(0,0,0,.15)
 }
 
-.header_text{
+.header-text{
   display: flex;
   align-items: center;
   padding: 0;

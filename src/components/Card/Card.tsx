@@ -1,5 +1,5 @@
 import React from "react";
-import EditIcon from "../common/icons/EditIcon";
+import {EditIcon} from "../common/icons/EditIcon";
 import styles from "./Card.module.css";
 import { ICardView } from "../../interfaces";
 

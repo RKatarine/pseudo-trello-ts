@@ -1,19 +1,19 @@
-import {ISection} from "../interfaces";
+import { ISection } from "../interfaces";
 
-export const sections: ISection[] = [
-    {
-        id: "0",
-        title: "First Section",
-        cards: [{id: "0", text: "Some card 1"}]
-    },
-    {
-        id: "1",
-        title: "Second Section",
-        cards: []
-    },
-    {
-        id: "2",
-        title: "Third Section",
-        cards: []
-    }
+export const sections: Array<ISection> = [
+  {
+    id: 0,
+    title: "First Section",
+    cards: [{ id: "0", text: "Some card 1" }],
+  },
+  {
+    id: 1,
+    title: "Second Section",
+    cards: [],
+  },
+  {
+    id: 2,
+    title: "Third Section",
+    cards: [],
+  },
 ];

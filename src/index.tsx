@@ -1,13 +1,14 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import { App } from "./components/App";
-import { sections } from "./stubs/sections";
-import * as serviceWorker from "./serviceWorker";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import {App} from './components/App/App';
+import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <App sections={sections} setSections={() => {}} />,
-  document.getElementById("root")
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change
