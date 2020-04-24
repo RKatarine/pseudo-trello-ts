@@ -21,6 +21,17 @@
 }
 
 .edit__button{
+  opacity: 0;
+  height: 24px;
+  font-size: 16px;
+  width: 24px;
+  border: none;
+  border-radius: 3px;
+  padding: 2px;
+}
+
+.edit__button:hover{
+  opacity: 1;
   height: 24px;
   font-size: 16px;
   width: 24px;

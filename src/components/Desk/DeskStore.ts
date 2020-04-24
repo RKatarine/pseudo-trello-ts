@@ -24,9 +24,7 @@ export class DeskStore {
 
   @action
   setDraggedCardInfo = (newDraggedCardInfo: IDraggedCardInfo | null) => {
-    if (newDraggedCardInfo !== null) {
-      this.draggedCardInfo = newDraggedCardInfo;
-    }
+    this.draggedCardInfo = newDraggedCardInfo;
   };
 
   @action

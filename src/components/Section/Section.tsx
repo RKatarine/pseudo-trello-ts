@@ -1,23 +1,23 @@
 import React from "react";
-import { Card } from "../Card";
+import { WrappedCard } from "../Card";
 import styles from "./Section.module.css";
 import { ISectionView } from "../../interfaces";
 
-export const Section: React.FC<ISectionView> = ({
+export const Section = ({
   id,
   cards,
   title,
   onAddCard,
   onEditCard,
   draggedCardInfo,
-  setDraggedCardInfo
-}) => {
+  setDraggedCardInfo,
+}: ISectionView) => {
   return (
     <section className={styles.section}>
       <header className={styles.section__header}>{title}</header>
       <div className={styles.body}>
-        {cards.map(card => (
-          <Card
+        {cards.map((card) => (
+          <WrappedCard
             isActive={
               draggedCardInfo !== null &&
               draggedCardInfo.cardId === card.id &&
@@ -29,14 +29,14 @@ export const Section: React.FC<ISectionView> = ({
                   ? null
                   : {
                       sectionId: id,
-                      cardId: card.id
+                      cardId: card.id,
                     }
               )
             }
             onEditCard={onEditCard}
             key={card.id}
             text={card.text}
-            setEditingMode={() => {}}
+            id={card.id}
             showEditButton={false}
           />
         ))}

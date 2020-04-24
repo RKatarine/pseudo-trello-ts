@@ -1,4 +1,5 @@
-import React from "react";
+import React, {ChangeEvent} from "react";
+import {Card} from "../components/Card/Card";
 
 export interface ICard {
   id: string;
@@ -30,7 +31,15 @@ export interface IDesk {
 }
 
 export interface IDeskProps {}
-
+export interface IBefore {
+  key: number;
+  id: number;
+  title: string;
+  cards: ICard[];
+  onChangeSection: (editedSection: ISection) => void;
+  draggedCardInfo: IDraggedCardInfo | null;
+  setDraggedCardInfo: (newDraggedCardInfo: IDraggedCardInfo | null) => void;
+}
 export interface ISectionView {
   key: number;
   id: number;
@@ -48,10 +57,25 @@ export interface ICardView {
   setEditingMode: (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => void;
-  showEditButton: boolean;
   isActive: boolean;
   onClick: () => void;
   onEditCard: (editedCardData: ICard) => void;
+}
+
+export interface ICardEditorView {
+  text:string;
+  onChange:(event: ChangeEvent<HTMLInputElement>)=>void;
+  onSave:()=>void
+}
+
+export interface IBeforeCard{
+  isActive:boolean;
+  onClick:()=>void;
+  onEditCard:(editedCardData: ICard)=>void;
+  key:string;
+  id:string;
+  text:string;
+  showEditButton:boolean
 }
 
 export interface IStyleProps {
