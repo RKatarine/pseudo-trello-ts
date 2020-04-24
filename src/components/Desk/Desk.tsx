@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Desk.module.css";
+import classes from "./Desk.module.css";
 import WrappedSection from "../Section";
 import { IDesk } from "../../interfaces";
 
@@ -11,8 +11,12 @@ export const Desk: React.FC<IDesk> = ({
   setDraggedCardInfo,
 }) => {
   return (
-    <div className={styles.board} tabIndex={0} onKeyDown={changeCardSection}>
-      <div className={styles.wrapper}>
+    <div
+      className={classes["board"]}
+      tabIndex={0}
+      onKeyDown={changeCardSection}
+    >
+      <div className={classes["wrapper"]}>
         {sections.map((section) => (
           <WrappedSection
             key={section.id}

@@ -1,6 +1,6 @@
 import React from "react";
 import { EditIcon } from "../common/icons/EditIcon";
-import styles from "./Card.module.css";
+import classes from "./Card.module.css";
 import { ICardView } from "../../interfaces";
 
 export const Card: React.FC<ICardView> = ({
@@ -10,10 +10,13 @@ export const Card: React.FC<ICardView> = ({
   onClick,
 }) => {
   return (
-    <div onClick={onClick} className={isActive ? styles.active : styles.card}>
-      <p className={styles.p}>{text}</p>
-      <button onClick={setEditingMode} className={styles.edit__button}>
-        <EditIcon className={styles.icon} />
+    <div
+      onClick={onClick}
+      className={isActive ? classes["active"] : classes["card"]}
+    >
+      <p className={classes["p"]}>{text}</p>
+      <button onClick={setEditingMode} className={classes["edit__button"]}>
+        <EditIcon className={classes["icon"]} />
       </button>
     </div>
   );

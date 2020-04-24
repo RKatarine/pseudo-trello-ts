@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./CardEditor.module.css";
+import classes from "./CardEditor.module.css";
 import { ICardEditorView } from "../../interfaces";
 
 export const CardEditor: React.FC<ICardEditorView> = ({
@@ -8,14 +8,14 @@ export const CardEditor: React.FC<ICardEditorView> = ({
   onSave,
 }) => {
   return (
-    <div className={styles.cardEditor}>
+    <div className={classes["cardEditor"]}>
       <input
-        className={styles.cardEditorInput}
+        className={classes["cardEditorInput"]}
         type="text"
         defaultValue={text}
         onChange={onChange}
       />
-      <button className={styles.cardEditorBtn} onClick={onSave}>
+      <button className={classes["cardEditorBtn"]} onClick={onSave}>
         Save
       </button>
     </div>

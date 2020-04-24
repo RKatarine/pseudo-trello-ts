@@ -1,6 +1,6 @@
 import React from "react";
 import { WrappedCard } from "../Card";
-import styles from "./Section.module.css";
+import classes from "./Section.module.css";
 import { ISectionView } from "../../interfaces";
 
 export const Section = ({
@@ -13,9 +13,9 @@ export const Section = ({
   setDraggedCardInfo,
 }: ISectionView) => {
   return (
-    <section className={styles.section}>
-      <header className={styles.section__header}>{title}</header>
-      <div className={styles.body}>
+    <section className={classes["section"]}>
+      <header className={classes["section__header"]}>{title}</header>
+      <div className={classes["body"]}>
         {cards.map((card) => (
           <WrappedCard
             isActive={
@@ -42,7 +42,7 @@ export const Section = ({
         ))}
       </div>
       <footer>
-        <button onClick={onAddCard} className={styles.add__card}>
+        <button onClick={onAddCard} className={classes["add__card"]}>
           Добавить карточку...
         </button>
       </footer>
