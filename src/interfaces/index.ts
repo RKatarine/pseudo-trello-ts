@@ -1,5 +1,4 @@
 import React, {ChangeEvent} from "react";
-import {Card} from "../components/Card/Card";
 
 export interface ICard {
   id: string;
@@ -10,11 +9,6 @@ export interface ISection {
   id: number;
   title: string;
   cards: ICard[];
-}
-
-export interface IApp {
-  sections: ISection[];
-  setSections: (newSections: Array<ISection>) => void;
 }
 
 export interface IDraggedCardInfo {

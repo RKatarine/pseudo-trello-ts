@@ -24,7 +24,7 @@ export const Desk: React.FC<IDesk> = ({
             onChangeSection={onChangeSection}
             draggedCardInfo={draggedCardInfo}
             setDraggedCardInfo={setDraggedCardInfo}
-          ></WrappedSection>
+          />
         ))}
       </div>
     </div>
