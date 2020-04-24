@@ -3,7 +3,7 @@ import { WrappedCard } from "../Card";
 import classes from "./Section.module.css";
 import { ISectionView } from "../../interfaces";
 
-export const Section = ({
+export const Section: React.FC<ISectionView> = ({
   id,
   cards,
   title,
@@ -11,7 +11,7 @@ export const Section = ({
   onEditCard,
   draggedCardInfo,
   setDraggedCardInfo,
-}: ISectionView) => {
+}) => {
   return (
     <section className={classes["section"]}>
       <header className={classes["section__header"]}>{title}</header>

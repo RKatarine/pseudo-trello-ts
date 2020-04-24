@@ -1,5 +1,13 @@
 import React, {ChangeEvent} from "react";
 
+export interface IStyleProps {
+  className: string;
+}
+
+export interface IKeyboardEvent {
+  keyCode: number;
+}
+
 export interface ICard {
   id: string;
   text: string;
@@ -16,7 +24,10 @@ export interface IDraggedCardInfo {
   sectionId: number;
 }
 
-export interface IDesk {
+export interface IDesk extends InjectedDeskProps{
+}
+
+export interface InjectedDeskProps {
   sections: ISection[];
   onChangeSection: (editedSection: ISection) => void;
   setDraggedCardInfo: (newDraggedCardInfo: IDraggedCardInfo | null) => void;
@@ -24,8 +35,12 @@ export interface IDesk {
   draggedCardInfo: IDraggedCardInfo | null;
 }
 
-export interface IDeskProps {}
-export interface IBefore {
+export interface InjectedSectionProps {
+  onAddCard: () => void;
+  onEditCard: (editedCardData: ICard) => void;
+}
+
+export interface ISectionProps {
   key: number;
   id: number;
   title: string;
@@ -34,17 +49,8 @@ export interface IBefore {
   draggedCardInfo: IDraggedCardInfo | null;
   setDraggedCardInfo: (newDraggedCardInfo: IDraggedCardInfo | null) => void;
 }
-export interface ISectionView {
-  key: number;
-  id: number;
-  title: string;
-  cards: ICard[];
-  onChangeSection: (editedSection: ISection) => void;
-  setDraggedCardInfo: (draggedCardInfo: IDraggedCardInfo | null) => void;
-  draggedCardInfo: IDraggedCardInfo | null;
-  onAddCard: () => void;
-  onEditCard: (editedCardData: ICard) => void;
-}
+
+export interface ISectionView extends ISectionProps, InjectedSectionProps {}
 
 export interface ICardView {
   text: string;
@@ -62,7 +68,7 @@ export interface ICardEditorView {
   onSave:()=>void
 }
 
-export interface IBeforeCard{
+export interface ICardProps{
   isActive:boolean;
   onClick:()=>void;
   onEditCard:(editedCardData: ICard)=>void;
@@ -70,12 +76,4 @@ export interface IBeforeCard{
   id:string;
   text:string;
   showEditButton:boolean
-}
-
-export interface IStyleProps {
-  className: string;
-}
-
-export interface IKeyboardEvent {
-  keyCode: number;
 }

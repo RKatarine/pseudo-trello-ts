@@ -3,11 +3,11 @@ import { Card } from "./Card";
 import React, { ChangeEvent } from "react";
 import { observer } from "mobx-react";
 
-import { IBeforeCard } from "../../interfaces";
+import { ICardProps } from "../../interfaces";
 import { action, observable } from "mobx";
 import { CardEditor } from "../CardEditor";
 
-class CardAction extends React.Component<IBeforeCard, {}> {
+class CardAction extends React.Component<ICardProps, {}> {
   @observable
   public isEditing: boolean = false;
 
@@ -46,6 +46,6 @@ class CardAction extends React.Component<IBeforeCard, {}> {
   }
 }
 
-const WrappedCard: React.ComponentType<IBeforeCard> = observer(CardAction);
+const WrappedCard: React.ComponentType<ICardProps> = observer(CardAction);
 
 export { WrappedCard };

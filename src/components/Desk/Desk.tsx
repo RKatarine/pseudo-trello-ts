@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./Desk.module.css";
-import WrappedSection from "../Section";
+import { WrappedSection } from "../Section";
 import { IDesk } from "../../interfaces";
 
 export const Desk: React.FC<IDesk> = ({
